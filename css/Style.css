@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=Sigmar&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    /* background-color: black; */
+    /* background: linear-gradient(160deg, rgb(142, 44, 124), rgb(60, 62, 199)); */
+}
+
+.container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    /* background: linear-gradient(160deg, rgb(142, 44, 124), rgb(60, 62, 199)); */
+}
+
+.background{
+    width: 100%;
+    height: 100%;
+    background-image: url(../images/ximiga.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    filter: blur(10px);
+    z-index: 1;
+    position: absolute;
+    transition: 0.5s;
+}
+
+.containPic{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    flex-direction: column;
+}
+
+.pic{
+    width: 450px;
+    height: 450px;
+    /* border: 1px black solid; */
+    border-radius: 50px;
+    box-shadow: 4px 8px 16px rgba(0, 0, 0, 0.25);
+    overflow: hidden;
+    z-index: 2;
+    margin-top: 100px;
+}
+
+.pic img{
+    width: 100%;
+    z-index: 2;
+}
+
+.listPic{
+    margin-top: 40px;
+    width: 100%;
+    height: 50px;
+    /* background-color: #fff; */
+    display: flex;
+    justify-content: center;
+
+}
+
+.listPic .smallPic{
+    width: 50px;
+    height: 100%;
+    /* border: 1px black solid; */
+    margin: 0 15px;
+    overflow: hidden;
+    border-radius: 5px;
+    box-shadow: 4px 8px 16px rgba(0, 0, 0, 0.25);
+}
+
+.listPic .smallPic img{
+    width: 100%;
+    opacity: 0.2; 
+    transition: 0.3s;
+}
+
+.listPic .smallPic img:hover{
+    opacity: 1;
+}
+
+.containText{
+    width: 50%;
+    height: 100%;
+    z-index: 2;
+    display: flex;
+    /* display: none; */
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.containText span{
+    font-family: 'Sigmar', cursive;
+    font-size: 48px;
+    color: rgb(242, 214, 180);
+    text-align: center;
+}
+
+.music-controls {
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(to top, #00000098, #00000037);
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 20px;
+    opacity: 0.2;
+    transition: opacity 0.3s ease-in-out;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4);
+  }
+  
+  .music-controls:hover {
+    opacity: 0.8;
+  }
+  
+  #playBtn, #muteBtn, #skipBtn {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    padding: 5px;
+    border: none;
+    border-radius: 50%;
+    font-size: 24px;
+    color: #fff;
+    background-color: #000;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin: 0 10px;
+    text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.4);
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4);
+  }
+  
+  #playBtn:hover, #muteBtn:hover, #skipBtn:hover {
+    transform: scale(1.1);
+    /* background-image: radial-gradient(circle at center, #ffffff 0%, #ffffff 25%, #000000 25%, #000000 100%); */
+  }
+
+.containListMusic{
+    width: 50%;
+    height: 100%;
+    z-index: 2;
+    /* display: flex; */
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    /* background-color: aqua; */
+
+}
+
+.containListMusic span{
+    font-family: 'Sigmar', cursive;
+    font-size: 38px;
+    color: rgb(242, 214, 180);
+
+}
+
+.containListMusic .containBoxMusic{
+    width: 90%;
+    height: 70%;
+    /* background-color: #fff; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.containListMusic .containBoxMusic .boxMusic{
+    width: 90%;
+    height: 50px;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+    margin: 10px 0;
+    opacity: 0.5;
+    transition: 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.containListMusic .containBoxMusic .boxMusic span{
+    font-family: 'Sigmar', cursive;
+    color: #000;
+    font-size: 18px;
+    text-align: center;
+}
+
+.containListMusic .containBoxMusic .boxMusic:hover{
+    opacity: 1 !important;
+}
+
+.toggleBtn{
+    position: absolute;
+    top: 5%;
+    right: 3%;
+    font-size: 30px;
+    font-weight: bolder;
+    border-radius: 25px;
+    border: none;
+    background-color: transparent;
+    z-index: 3;
+}
